@@ -41,3 +41,24 @@ fits into the full app.
 `GradeService`, `NotificationService`, `AuthMiddleware`, `RoleMiddleware`,
 `Database`, and the shared frontend UI kit (`components/ui/*`), layout
 (`DashboardLayout`, `Sidebar`, `Navbar`), and `AuthContext`.
+
+## Parent — role slice
+
+Added on the `Fatema` branch. The parent dashboard and related views are
+read-only for linked student records; parents can update their own profile and
+password.
+
+## Contents
+
+- `backend/src/Controllers/ParentController.php` — linked children, dashboard, results, academic history, attendance, report card, parent profile, and change-password.
+- `backend/routes/parent.routes.php` — reference-only route list (see file header).
+- `frontend/src/pages/parent/*.jsx` — Dashboard, Results, AcademicHistory, Attendance, ReportCard, Profile, Notifications, Settings.
+- `frontend/src/context/ParentContext.jsx` — tracks the selected child for parents with multiple linked students.
+- `frontend/src/components/layout/ChildSwitcher.jsx` — child picker shown on parent pages.
+- `frontend/src/api/parent.endpoints.js` — `ParentApi`, reference-only.
+
+## Depends on (already on `main`, not duplicated here)
+
+`NotificationService`, `AuthMiddleware`, `RoleMiddleware`, `Database`, and the
+shared frontend UI kit (`components/ui/*`), layout (`DashboardLayout`,
+`Sidebar`, `Navbar`), and `AuthContext`.
