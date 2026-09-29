@@ -1,4 +1,7 @@
-# Student — role slice
+# Web-Project
+Student Management System
+
+## Student — role slice
 
 Pushed on the `student` branch. See `../README.md` (on `main`) for how this
 fits into the full app.
